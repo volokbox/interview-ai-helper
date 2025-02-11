@@ -1,12 +1,12 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "./contexts/theme-context";
-import React from "react"; // Added import for React
+import React from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "InterviewAI - AI-Powered Interview Preparation",
+  title: "Quorix",
   description: "Ace your interviews with personalized AI coaching",
 };
 

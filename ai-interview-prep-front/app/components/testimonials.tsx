@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { motion } from "framer-motion"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { motion } from "framer-motion";
 
 const testimonials = [
   {
@@ -29,13 +29,15 @@ const testimonials = [
       "The mock interviews were so realistic, I felt fully prepared for my actual interviews. Thanks, InterviewAI!",
     avatar: "/placeholder.svg",
   },
-]
+];
 
 export default function Testimonials() {
   return (
-    <section className="py-20 px-6 bg-muted/50 dark:bg-gradient-to-b dark:from-muted dark:to-background">
+    <section className="py-20 px-6 bg-gradient-to-b from-background to-muted/50 dark:from-background dark:to-muted">
       <div className="container">
-        <h2 className="text-3xl font-bold text-center mb-12">What Our Users Say</h2>
+        <h2 className="text-3xl font-bold text-center mb-12">
+          What Our Users Say
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <motion.div
@@ -48,7 +50,10 @@ export default function Testimonials() {
                 <CardHeader>
                   <div className="flex items-center space-x-4">
                     <Avatar>
-                      <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
+                      <AvatarImage
+                        src={testimonial.avatar}
+                        alt={testimonial.name}
+                      />
                       <AvatarFallback>
                         {testimonial.name
                           .split(" ")
@@ -57,7 +62,9 @@ export default function Testimonials() {
                       </AvatarFallback>
                     </Avatar>
                     <div>
-                      <CardTitle className="text-lg">{testimonial.name}</CardTitle>
+                      <CardTitle className="text-lg">
+                        {testimonial.name}
+                      </CardTitle>
                       <p className="text-sm text-muted-foreground">
                         {testimonial.role} at {testimonial.company}
                       </p>
@@ -65,7 +72,9 @@ export default function Testimonials() {
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground italic">"{testimonial.testimonial}"</p>
+                  <p className="text-muted-foreground italic">
+                    "{testimonial.testimonial}"
+                  </p>
                 </CardContent>
               </Card>
             </motion.div>
@@ -73,6 +82,5 @@ export default function Testimonials() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-

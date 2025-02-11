@@ -30,7 +30,7 @@ export default function Header() {
           >
             <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
           </svg>
-          <span className="font-bold text-xl text-foreground">InterviewAI</span>
+          <span className="font-bold text-xl">Quorix</span>
         </Link>
         <nav className="hidden md:flex space-x-6">
           <Link
@@ -57,7 +57,7 @@ export default function Header() {
             variant="ghost"
             size="icon"
             onClick={toggleTheme}
-            className="text-foreground"
+            className="text-primary"
           >
             {theme === "light" ? (
               <Moon className="h-5 w-5" />
@@ -65,9 +65,7 @@ export default function Header() {
               <Sun className="h-5 w-5" />
             )}
           </Button>
-          <Button variant="ghost" className="text-foreground">
-            Log In
-          </Button>
+          <Button variant="ghost">Log In</Button>
           <Button>Sign Up</Button>
         </div>
       </div>

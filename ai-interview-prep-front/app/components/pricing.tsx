@@ -1,16 +1,27 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Check } from "lucide-react"
-import { motion } from "framer-motion"
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Check } from "lucide-react";
+import { motion } from "framer-motion";
 
 const plans = [
   {
     name: "Basic",
     price: "$19",
     description: "Perfect for beginners",
-    features: ["5 AI-powered mock interviews per month", "Basic performance analytics", "Email support"],
+    features: [
+      "5 AI-powered mock interviews per month",
+      "Basic performance analytics",
+      "Email support",
+    ],
   },
   {
     name: "Pro",
@@ -34,16 +45,18 @@ const plans = [
       "Dedicated account manager",
     ],
   },
-]
+];
 
 export default function Pricing() {
   return (
     <section
       id="pricing"
-      className="py-20 px-6 bg-gradient-to-b from-background to-muted/50 dark:from-background dark:to-muted"
+      className="py-20 px-6 bg-muted/50 dark:bg-gradient-to-b dark:from-muted dark:to-background"
     >
       <div className="container">
-        <h2 className="text-3xl font-bold text-center mb-12">Choose Your Plan</h2>
+        <h2 className="text-3xl font-bold text-center mb-12">
+          Choose Your Plan
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {plans.map((plan, index) => (
             <motion.div
@@ -54,7 +67,9 @@ export default function Pricing() {
             >
               <Card className="flex flex-col transition-all duration-300 hover:shadow-lg h-full border-none bg-gradient-to-br from-card to-background">
                 <CardHeader>
-                  <CardTitle className="text-2xl font-bold">{plan.name}</CardTitle>
+                  <CardTitle className="text-2xl font-bold">
+                    {plan.name}
+                  </CardTitle>
                   <CardDescription>{plan.description}</CardDescription>
                 </CardHeader>
                 <CardContent className="flex-grow">
@@ -84,6 +99,5 @@ export default function Pricing() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-

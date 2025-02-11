@@ -1,7 +1,13 @@
-"use client"
+"use client";
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { motion } from "framer-motion"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { motion } from "framer-motion";
 
 const steps = [
   {
@@ -20,13 +26,13 @@ const steps = [
     title: "Receive Feedback",
     description: "Get instant feedback and actionable insights to improve.",
   },
-]
+];
 
 export default function HowItWorks() {
   return (
     <section
       id="how-it-works"
-      className="py-20 px-6 bg-gradient-to-b from-background to-muted/50 dark:from-background dark:to-muted"
+      className="py-20 px-6 bg-muted/50 dark:bg-gradient-to-b dark:from-muted dark:to-background"
     >
       <div className="container">
         <h2 className="text-3xl font-bold text-center mb-12">How It Works</h2>
@@ -43,10 +49,14 @@ export default function HowItWorks() {
                   <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold text-xl mb-4">
                     {index + 1}
                   </div>
-                  <CardTitle className="text-xl font-semibold">{step.title}</CardTitle>
+                  <CardTitle className="text-xl font-semibold">
+                    {step.title}
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-muted-foreground">{step.description}</CardDescription>
+                  <CardDescription className="text-muted-foreground">
+                    {step.description}
+                  </CardDescription>
                 </CardContent>
               </Card>
             </motion.div>
@@ -54,6 +64,5 @@ export default function HowItWorks() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-

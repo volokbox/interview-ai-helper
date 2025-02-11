@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="py-20 px-6 overflow-hidden bg-background">
+    <section className="py-20 px-6 overflow-hidden">
       <div className="container flex flex-col lg:flex-row items-center gap-12">
         <motion.div
           className="flex flex-col items-center lg:items-start text-center lg:text-left lg:w-1/2"
@@ -24,7 +24,7 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4">
             <Button
               size="lg"
-              className="bg-primary text-primary-foreground hover:bg-primary/90"
+              className="bg-gradient-to-r from-primary to-purple-600 text-white"
             >
               Get Started Free
             </Button>
@@ -39,12 +39,13 @@ export default function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <div className="relative w-full h-[400px]">
+          <div className="relative w-full">
             <Image
-              src="/file.svg"
+              src="/hero.svg"
               alt="AI Interview Coach"
-              fill
-              className="rounded-lg shadow-xl object-cover"
+              width={700}
+              height={500}
+              className="rounded-lg object-cover w-full h-auto"
             />
           </div>
         </motion.div>
