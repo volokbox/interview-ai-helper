@@ -65,8 +65,16 @@ export default function Header() {
               <Sun className="h-5 w-5" />
             )}
           </Button>
-          <Button variant="ghost">Log In</Button>
-          <Button>Sign Up</Button>
+          <Link href="/signin">
+            <Button variant="ghost" className="text-foreground">
+              Log In
+            </Button>
+          </Link>
+          <Link href="/signup">
+            <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
+              Sign Up
+            </Button>
+          </Link>
         </div>
       </div>
     </motion.header>
